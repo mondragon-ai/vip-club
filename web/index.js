@@ -105,6 +105,7 @@ export async function createServer(
   app.set("top-level-oauth-cookie", TOP_LEVEL_OAUTH_COOKIE);
   app.set("use-online-tokens", USE_ONLINE_TOKENS);
 
+  // @ts-ignore
   app.use(cookieParser(Shopify.Context.API_SECRET_KEY));
 
   applyAuthMiddleware(app, {
@@ -197,6 +198,7 @@ export async function createServer(
     const serveStatic = await import("serve-static").then(
       ({ default: fn }) => fn
     );
+    // @ts-ignore
     app.use(compression());
     app.use(serveStatic(PROD_INDEX_PATH, { index: false }));
   }
