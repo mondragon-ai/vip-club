@@ -49,11 +49,11 @@ Shopify.Context.initialize({
   // @ts-ignore
   API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
   // @ts-ignore
-  SCOPES: process.env.SCOPES.split(","),
+  SCOPES: process.env.SCOPES?.split(','),
   // @ts-ignore
-  HOST_NAME: process.env.HOST.replace(/https?:\/\//, ""),
+  HOST_NAME: process.env.HOST?.replace(/https?:\/\//, ""),
   // @ts-ignore
-  HOST_SCHEME: process.env.HOST.split("://")[0],
+  HOST_SCHEME: process.env.HOST?.split("://")[0],
   API_VERSION: LATEST_API_VERSION,
   IS_EMBEDDED_APP: true,
   // This should be replaced with your preferred storage strategy
