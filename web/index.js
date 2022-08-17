@@ -45,15 +45,15 @@ console.log("42 - index.js -- \n", typeof new Object(test));
 
 Shopify.Context.initialize({
   // @ts-ignore
-  API_KEY: process.env.SHOPIFY_API_KEY,
+  API_KEY: process.env.SHOPIFY_API_KEY || "36fdead70a1e3c90a2fb4336c4f18861",
   // @ts-ignore
-  API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
+  API_SECRET_KEY: process.env.SHOPIFY_API_SECRET || "527e91b3110770b984e9f22e85027e4d",
   // @ts-ignore
-  SCOPES: process.env.SCOPES?.split(','),
+  SCOPES: process.env.SCOPES?.split(',') || ["write_products"],
   // @ts-ignore
-  HOST_NAME: process.env.HOST?.replace(/https?:\/\//, ""),
+  HOST_NAME: process.env.HOST?.replace(/https?:\/\//, "") || "https://test-bigly.herokuapp.com/".replace(/https?:\/\//, ""),
   // @ts-ignore
-  HOST_SCHEME: process.env.HOST?.split("://")[0],
+  HOST_SCHEME: process.env.HOST?.split("://")[0] || "https://test-bigly.herokuapp.com/".split("://")[0],
   API_VERSION: LATEST_API_VERSION,
   IS_EMBEDDED_APP: true,
   // This should be replaced with your preferred storage strategy
