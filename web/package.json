@@ -6,7 +6,7 @@
     "debug": "node --inspect-brk index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./frontend",
     "serve": "cross-env NODE_ENV=production node index.js ",
-    "start": "npm run serve",
+    "start": "npm install && npm run serve",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "type": "module",
