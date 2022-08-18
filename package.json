@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "web/index.js",
   "license": "UNLICENSED",
+  "engines": {"npm":"8.1.2","node":"v16.13.2"},
   "scripts": {
     "shopify": "shopify",
     "build": "shopify app build",
